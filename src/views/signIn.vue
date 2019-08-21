@@ -8,67 +8,104 @@
     </b-navbar-brand>
   </b-navbar>
 </div>
-
-      <h1 class="welcome">Welcome Please Sign In</h1>
-      <div>
-  <b-card bg-variant="light">
-    <b-form-group
-      label-cols-lg="3"
-      label="Shipping Address"
-      label-size="lg"
-      label-class="font-weight-bold pt-0"
-      class="mb-0"
-    >
-      <b-form-group
-        label-cols-sm="3"
-        label="Street:"
-        label-align-sm="right"
-        label-for="nested-street"
-      >
-        <b-form-input id="nested-street"></b-form-input>
-      </b-form-group>
-
-      <b-form-group
-        label-cols-sm="3"
-        label="City:"
-        label-align-sm="right"
-        label-for="nested-city"
-      >
-        <b-form-input id="nested-city"></b-form-input>
-      </b-form-group>
-
-      <b-form-group
-        label-cols-sm="3"
-        label="State:"
-        label-align-sm="right"
-        label-for="nested-state"
-      >
-        <b-form-input id="nested-state"></b-form-input>
-      </b-form-group>
-
-      <b-form-group
-        label-cols-sm="3"
-        label="Country:"
-        label-align-sm="right"
-        label-for="nested-country"
-      >
-        <b-form-input id="nested-country"></b-form-input>
-      </b-form-group>
-
-      <b-form-group
-        label-cols-sm="3"
-        label="Ship via:"
-        label-align-sm="right" class="mb-0"
-      >
-        <b-form-radio-group
-          class="pt-2"
-          :options="['Air', 'Courier', 'Mail']"
-        ></b-form-radio-group>
-      </b-form-group>
-    </b-form-group>
-  </b-card>
-</div>
+  <!-- Container 1-->
+     <b-container>
+      <b-row>
+        <b-col><h1 class="welcome">Welcome Please Sign In</h1></b-col>
+     </b-row>
+    </b-container>
+    <!-- Container 2 form-->
+        <b-container>
+          <b-row>
+            <b-col>
+              <h1>
+                <div class="card">
+                </div>
+              </h1>
+            </b-col>
+         </b-row>
+        </b-container>
+    
+    <!--ROW 1-->
+    <div class="mt-4 columns cont">
+      <div class="column">
+        <div class="field">
+          <label class="label">First Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Text input">
+            </div>
+        </div>
       </div>
+      <div class="column">
+        <div class="field">
+          <label class="label"> Last Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Text input">
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <label class="label">Email</label>
+            <div class="control">
+             <input class="input" type="email" placeholder="Text input">
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <label class="label">Phone Number</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Text input">
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Drop Down-->
+    <div class="mt-4 columns cont">
+      <div class="column">
+        <div class="field">
+          <label class="label">Person to see</label>
+           <div class="field">
+                  <div class="select">
+                    <select>
+                      <option>Kyle Gush</option>
+                      <option>Unknown</option>
+                    </select>
+                  </div>
+              </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <label class="label">Purpose of visit</label>
+            <div class="field">
+                  <div class="select">
+                    <select>
+                      <option>Job Interview</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+              </div>
+            </div>
+      </div>
+      <div class="column">
+        <div class="field">
+            <div class="control">
+            </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="field">
+            <div class="control is-pulled-right">
+              <button class=" mt-5 btn btn-primary">Submit</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -86,5 +123,9 @@ export default {
   .welcome{
     font-size: 2.5em;
     margin-bottom: 3%;
+  }
+  .cont{
+    padding-left: 5%;
+    padding-right: 5%;
   }
 </style>
